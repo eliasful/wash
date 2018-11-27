@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'wash',
+    podModulePrefix: 'wash/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

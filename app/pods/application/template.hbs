@@ -1,0 +1,21 @@
+{{#bs-navbar type="dark" backgroundColor="primary" as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "home" class="navbar-brand"}}
+      <b>WASH</b>WASH
+    {{/link-to}}
+  </div>
+
+  {{navbar.content class="mr-auto"}}
+
+  {{#bs-button type="success" class="p-10"}}
+    Solicite um serviço
+  {{/bs-button}}
+  {{#bs-button type="success" outline=true}}
+    Cadastre-se como um profissional
+  {{/bs-button}}
+{{/bs-navbar}}
+
+<div class="container-fluid">
+  {{outlet}}
+</div>

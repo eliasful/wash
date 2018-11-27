@@ -1,0 +1,26 @@
+<div class="col-sm-12 py-sm-3 pl-sm-5 bd-content row">
+  <div class="col-sm-8">
+    <h1 class="bd-title">
+      Precisando de ajuda com as roupas?
+      <p class="h4">Nós te ajudamos a encontrar as pessoas certas pra isso.</p>
+    </h1>
+  </div>
+  <div class="dropdown-divider"></div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="bd-title">
+          Diga-nos o que você precisa
+        </h3>
+        <div class="form">
+          {{#bs-form model=login novalidate=true as |form|}}
+            {{form.element controlType="power-select" property="foo" label="Serviço" options=options}}
+            {{bs-button defaultText="Solicitar" type="primary" buttonType="submit"}}
+          {{/bs-form}}
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
