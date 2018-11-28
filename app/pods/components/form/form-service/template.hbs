@@ -1,0 +1,14 @@
+<div class="form">
+  {{#bs-form model=model novalidate=true as |form|}}
+    {{#form.element
+      controlType="power-select"
+      property="description"
+      optionLabelPath="description"
+      label="Serviços"
+      options=services as |el|}}
+      {{el.control searchPlaceholder="O que você procura?"}}
+    {{/form.element}}
+    
+    {{bs-button defaultText="Solicitar" type="primary" buttonType="submit" block=true}}
+  {{/bs-form}}
+</div>

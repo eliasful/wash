@@ -1,0 +1,8 @@
+{{#leaflet-map lat=lat lng=lng zoom=zoom onMoveend=(action "updateCenter") as |layers|}}
+  {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+  
+  {{#each marks as |m|}}
+    {{layers.marker lat=m.latitude lng=m.longitude}}
+  {{/each}}
+  
+{{/leaflet-map}}

@@ -1,4 +1,4 @@
-{{#bs-navbar type="dark" backgroundColor="primary" as |navbar|}}
+{{#bs-navbar type="dark" backgroundColor="primary" class="sticky-top" as |navbar|}}
   <div class="navbar-header">
     {{navbar.toggle}}
     {{#link-to "home" class="navbar-brand"}}
@@ -7,13 +7,15 @@
   </div>
 
   {{navbar.content class="mr-auto"}}
+  <form class="form-inline">
+    {{#bs-button type="success" class="float-left"}}
+      Solicite um serviço
+    {{/bs-button}}
+    {{#bs-button type="success" outline=true class="float-right"}}
+      Cadastre-se como um profissional
+    {{/bs-button}}
+  </form>
 
-  {{#bs-button type="success" class="p-10"}}
-    Solicite um serviço
-  {{/bs-button}}
-  {{#bs-button type="success" outline=true}}
-    Cadastre-se como um profissional
-  {{/bs-button}}
 {{/bs-navbar}}
 
 <div class="container-fluid">

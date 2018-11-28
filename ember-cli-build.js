@@ -8,6 +8,15 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': false
+    },
+    fingerprint: {
+      exclude: [
+        'images/layers-2x.png',
+        'images/layers.png',
+        'images/marker-icon-2x.png',
+        'images/marker-icon.png',
+        'images/marker-shadow.png'
+      ]
     }
   });
 
