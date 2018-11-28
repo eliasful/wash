@@ -1,0 +1,10 @@
+.btn-primary,
+.btn-success {
+  color: $white!important;
+}
+
+.btn-outline-light:hover {
+  background-color: lighten($primary-color, 30%)!important;
+  border-color: lighten($primary-color, 30%)!important;
+  color: $gradient-color!important;
+}

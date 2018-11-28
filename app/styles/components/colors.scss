@@ -1,0 +1,16 @@
+$white: white;
+$primary-color: #24c6f1;
+$success-color: #ff7cd5;
+$gradient-color: linear-gradient(to left bottom, #00caff, #20ceff, #31d2ff, #3ed5ff, #4ad9ff);
+
+.bg-primary,
+.btn-primary,
+.badge-primary,
+.alert-primary {
+  background-image: $gradient-color;
+}
+
+$theme-colors: (
+  "primary": $primary-color,
+  "success": $success-color
+);

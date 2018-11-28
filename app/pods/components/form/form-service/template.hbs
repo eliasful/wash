@@ -5,10 +5,11 @@
       property="description"
       optionLabelPath="description"
       label="Serviços"
+      placeholder="O que você procura?"
       options=services as |el|}}
       {{el.control searchPlaceholder="O que você procura?"}}
     {{/form.element}}
-    
+
     {{bs-button defaultText="Solicitar" type="primary" buttonType="submit" block=true}}
   {{/bs-form}}
 </div>
