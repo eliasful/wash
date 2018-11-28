@@ -1,6 +1,5 @@
 {{#bs-navbar type="dark" backgroundColor="primary" class="sticky-top" as |navbar|}}
   <div class="navbar-header">
-    {{navbar.toggle}}
     {{#link-to "home" class="navbar-brand"}}
       <b>WASH</b>WASH
     {{/link-to}}
@@ -8,10 +7,10 @@
 
   {{navbar.content class="mr-auto"}}
   <form class="form-inline">
-    {{#bs-button type="success" class="float-left"}}
+    {{#bs-button type="success" class="mr-10"}}
       Solicite um serviço
     {{/bs-button}}
-    {{#bs-button type="success" outline=true class="float-right"}}
+    {{#bs-button type="light" outline=true}}
       Cadastre-se como um profissional
     {{/bs-button}}
   </form>
