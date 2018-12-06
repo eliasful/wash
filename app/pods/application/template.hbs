@@ -10,7 +10,7 @@
 
   {{navbar.content class="mr-auto"}}
   <form class="form-inline">
-    {{#bs-button type="success" class="mr-10"}}
+    {{#bs-button type="success" class="mr-10" onClick=(perform overlay)}}
       Solicite um serviço
     {{/bs-button}}
     {{#bs-button type="light" outline=true}}
@@ -23,3 +23,4 @@
 <div class="container-fluid">
   {{outlet}}
 </div>
+{{overlay-container}}

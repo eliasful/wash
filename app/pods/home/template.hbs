@@ -10,10 +10,15 @@
     <div class="col-sm-7">
       <h3 class="bd-title">
         Diga-nos o que você precisa
+        <ul>
+          {{#each model.users as |user|}}
+            <li>{{user.username}}</li>
+          {{/each}}
+        </ul>
       </h3>
       <div class="card">
         <div class="card-body">
-          {{form/form-service model=model}}
+          {{form/form-service model=model.service}}
         </div>
       </div>
     </div>
