@@ -2,7 +2,7 @@
   {{#bs-form model=model novalidate=true as |form|}}
     {{#form.element
       controlType="power-select"
-      property="description"
+      property="serviceType"
       optionLabelPath="description"
       label="Qual o tipo das roupas que deseja lavar?"
       placeholder="ex.: Roupa Social"
@@ -12,7 +12,7 @@
 
     {{#form.element
       controlType="power-select"
-      property="description"
+      property="serviceQuantity"
       optionLabelPath="description"
       label="Para quantas pessoas?"
       placeholder="ex.: 2 pessoas"
@@ -20,6 +20,6 @@
       {{el.control searchPlaceholder="Para quantas pessoas?"}}
     {{/form.element}}
 
-    {{bs-button defaultText="Buscar Serviços" type="primary" buttonType="submit" block=true}}
+    {{bs-button defaultText="Buscar Serviços" type="primary" buttonType="submit" block=true onClick=(action "search" model)}}
   {{/bs-form}}
 </div>

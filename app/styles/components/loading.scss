@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+.loading-bro {
+  z-index: 9999!important;
+  background: black;
+  opacity: 0.8;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  > h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-weight: 300;
+    color: #8E8E8E;
+  }
+  animation: fade-in 0.5s;
+}
+
+.loading-fade {
+  animation: fade-out 0.5s;
+}
+
+#load {
+		width: 150px;
+    animation: loading 3s linear infinite;
+    #loading-inner {
+		  stroke: {
+        dashoffset: 0;
+        dasharray: 300;
+        width: 10;
+        miterlimit: 10;
+        linecap: round;
+      }
+      animation: loading-circle 2s linear infinite;
+      stroke: #51BBA7;
+      fill: transparent;
+    }
+	}
+
+@keyframes loading {
+		0% {
+      transform: rotate(0);
+    }
+		100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes loading-circle {
+		0% {
+      stroke-dashoffset: 0
+    }
+		100% {
+      stroke-dashoffset: -600;
+    }
+}
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 0.8;}
+}
+
+@keyframes fade-out {
+  0% {opacity: 0.8;}
+  100% {opacity: 0;}
+}
