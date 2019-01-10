@@ -4,12 +4,22 @@
       controlType="power-select"
       property="description"
       optionLabelPath="description"
-      label="Serviços"
-      placeholder="O que você procura?"
-      options=services as |el|}}
-      {{el.control searchPlaceholder="O que você procura?"}}
+      label="Qual o tipo das roupas que deseja lavar?"
+      placeholder="ex.: Roupa Social"
+      options=model.servicesType as |el|}}
+      {{el.control searchPlaceholder="Qual o tipo das roupas que deseja lavar?"}}
     {{/form.element}}
 
-    {{bs-button defaultText="Solicitar" type="primary" buttonType="submit" block=true}}
+    {{#form.element
+      controlType="power-select"
+      property="description"
+      optionLabelPath="description"
+      label="Para quantas pessoas?"
+      placeholder="ex.: 2 pessoas"
+      options=model.servicesQuantity as |el|}}
+      {{el.control searchPlaceholder="Para quantas pessoas?"}}
+    {{/form.element}}
+
+    {{bs-button defaultText="Buscar Serviços" type="primary" buttonType="submit" block=true}}
   {{/bs-form}}
 </div>

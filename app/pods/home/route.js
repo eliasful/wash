@@ -4,7 +4,8 @@ import { hash } from 'rsvp';
 export default Route.extend({
   model() {
     return hash({
-      service: this.store.createRecord('service'),
+      servicesType: this.store.findAll('service-type'),
+      servicesQuantity: this.store.findAll('service-quantity'),
       users: this.store.findAll('user')
     });
   }
