@@ -3,7 +3,7 @@
 {{#bs-navbar type="dark" backgroundColor="primary" class="sticky-top" as |navbar|}}
   <div class="navbar-header">
     {{#link-to "home" class="navbar-brand"}}
-      <img src="logo-wash.png" width="40" width="40" alt="WASH!Wash">
+      <img src="/logo-wash.png" width="40" width="40" alt="WASH!Wash">
     {{/link-to}}
     {{#link-to 'home' class="navbar-brand"}}
       <b>WASH</b>WASH
@@ -15,9 +15,9 @@
     {{#bs-button type="success" class="mr-10" onClick=(perform overlay)}}
       Solicite um serviço
     {{/bs-button}}
-    {{#bs-button type="light" outline=true}}
+    {{#link-to 'professional.new' class="btn btn-outline-light"}}
       Cadastre-se como um profissional
-    {{/bs-button}}
+    {{/link-to}}
   </form>
 
 {{/bs-navbar}}
