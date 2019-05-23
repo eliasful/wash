@@ -1,13 +1,14 @@
-{{#bs-form model=model onSubmit=(action "submit") as |form|}}
+<h1>teste {{model.nome}}</h1>
+{{#bs-form model=this onSubmit=(action "submit") as |form|}}
   <div class="row">
     <div class="col-sm-12">
-      {{form.element controlType="name" label="Nome" placeholder="ex.: João das Neves" property="name"}}
+      {{form.element controlType="text" label="Nome" placeholder="ex.: João das Neves" property="model.name"}}
     </div>
     <div class="col-sm-12">
-      {{form.element controlType="phone" label="Telefone" placeholder="ex.: (00) 1234-5678" property="phone"}}
+      {{form.element controlType="phone" label="Telefone" placeholder="ex.: (00) 1234-5678" property="model.phone"}}
     </div>
     <div class="col-sm-12">
-      {{form.element controlType="email" label="Email" placeholder="ex.: joao@email.com" property="email"}}
+      {{form.element controlType="email" label="Email" placeholder="ex.: joao@email.com" property="model.email"}}
     </div>
     <div class="col-sm-12">
       {{bs-button defaultText="Enviar e continuar" type="primary" block=true buttonType="submit" }}

@@ -24,7 +24,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.urlServer = 'http://localhost:8080';
+    ENV.urlServer = 'http://localhost:1337';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

@@ -2,12 +2,12 @@ import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
-  ajax: service(),
+  store: service(),
   loading: service(),
   servicesQuantity: null,
   servicesType: null,
   async didInsertElement() {
-    const servicesType = await this.get('ajax').request('service-type/');
+    const servicesType = await this.get('store').findAll('service-type');
     this.set('servicesType', servicesType);
     this.set('servicesQuantity', [{
       description: '1 pessoa',
