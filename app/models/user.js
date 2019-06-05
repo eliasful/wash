@@ -1,44 +1,7 @@
 import DS from 'ember-data';
-import { validator, buildValidations } from 'ember-cp-validations';
+import EmberValidations from 'ember-validations';
 
-const Validations = buildValidations({
-  email: [
-    validator('presence', true),
-    validator('format', { type: 'email' })
-  ],
-  password: [
-    validator('length', {
-      min: 4,
-      max: 8
-    })
-  ],
-  name: [
-    validator('presence', true),
-  ],
-  phone: [
-    validator('presence', true),
-    validator('format', {
-      allowBlank: true,
-      type: 'phone'
-    })
-  ],
-  birthday: [
-    validator('date', {
-      before: 'now',
-      precision: 'day',
-      format: 'DD/MM/YYY',
-      errorFormat: 'DD/MM/YYYY'
-    })
-  ],
-  document: [
-    validator('format', {
-      regex: /([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2})/,
-      message: 'CPF inválido'
-    })
-  ]
-});
-
-export default DS.Model.extend(Validations, {
+export default DS.Model.extend(EmberValidations, {
   username: DS.attr('string'),
   email: DS.attr('string'),
   password: DS.attr('string'),
@@ -53,5 +16,20 @@ export default DS.Model.extend(Validations, {
   city: DS.attr('string'),
   state: DS.attr('string'),
   lat: DS.attr('string'),
-  lng: DS.attr('string')
+  lng: DS.attr('string'),
+
+  validations: {
+    'username': {
+      presence: true,
+      length: { minimum: 6 },
+      message: 'must be letters and numbers only'
+    },
+    'email': {
+      presence: true
+    },
+    'password': {
+      presence: true,
+      length: { minimum: 8 }
+    }
+  }
 });

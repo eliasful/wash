@@ -11,6 +11,7 @@ Router.map(function() {
 
   this.route('professional', function() {
     this.route('new');
+    this.route('services');
   });
 });
 
