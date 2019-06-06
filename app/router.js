@@ -10,7 +10,11 @@ Router.map(function() {
   this.route('home');
 
   this.route('professional', function() {
-    this.route('new');
+    this.route('new', function() {
+      this.route('services');
+      this.route('address');
+      this.route('contact');
+    });
     this.route('services');
   });
 });

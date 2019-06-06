@@ -1,0 +1,42 @@
+<div class="form">
+  {{#bs-form model=userService novalidate=true as |form|}}
+    {{#form.element
+      controlType="power-select"
+      property="service"
+      optionLabelPath="description"
+      label="Qual o tipo das roupas que deseja lavar?"
+      placeholder="ex.: Roupa Social"
+      options=servicesType as |el|}}
+      {{el.control searchPlaceholder="Que tipo de serviço você deseja prestar?"}}
+    {{/form.element}}
+
+    {{form.element controlType="number"
+                   label="Quanto deseja cobrar por esse serviço? (unidade)"
+                   placeholder="R$ 10,00"
+                   property="price"}}
+
+    {{bs-button defaultText="Adicionar serviço" type="primary" buttonType="submit" click=(action "addService")}}
+  {{/bs-form}}
+</div>
+<br/>
+{{#if model.userServices}}
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>Serviço</th>
+      <th class="text-right">Preço unitário R$</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each model.userServices as |userService|}}
+      <tr>
+        <td>{{userService.service.description}}</td>
+        <td class="text-right">R$ {{userService.price}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+  {{#link-to "professional.new.address" class="btn btn-primary btn-block"}}
+    Próximo passo
+  {{/link-to}}
+{{/if}}

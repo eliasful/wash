@@ -11,12 +11,10 @@ export default DS.Model.extend(EmberValidations, {
   document: DS.attr('string'),
 
   address: DS.attr('string'),
-  number: DS.attr('string'),
-  neighborhood: DS.attr('string'),
-  city: DS.attr('string'),
-  state: DS.attr('string'),
   lat: DS.attr('string'),
   lng: DS.attr('string'),
+
+  userServices: DS.hasMany('user-service'),
 
   validations: {
     'username': {
