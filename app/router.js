@@ -11,8 +11,12 @@ Router.map(function() {
 
   this.route('professional', function() {
     this.route('new', function() {
-      this.route('services');
-      this.route('address');
+      this.route('services', {
+        path: '/:user_id/services'
+      });
+      this.route('address', {
+        path: '/:user_id/address'
+      });
       this.route('contact');
     });
     this.route('services');

@@ -12,7 +12,8 @@ export default Component.extend({
   actions: {
     submit() {
       this.get('model').save().then((user) => {
-        this.get('router').transitionTo('professional.new.services');
+        console.log(user)
+        this.get('router').transitionTo('home');
       });
     }
   }

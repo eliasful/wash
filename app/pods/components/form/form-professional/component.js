@@ -6,7 +6,7 @@ export default Component.extend({
   actions: {
     submit() {
       this.get('model').save().then((user) => {
-        this.get('router').transitionTo('professional.new.services');
+        this.get('router').transitionTo('professional.new.services', user);
       });
     }
   }

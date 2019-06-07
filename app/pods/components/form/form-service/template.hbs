@@ -1,0 +1,25 @@
+<div class="form">
+  {{#bs-form model=model novalidate=true as |form|}}
+    {{#form.element
+      controlType="power-select-multiple"
+      property="serviceType"
+      optionLabelPath="description"
+      label="Qual o tipo das roupas que deseja lavar?"
+      placeholder="ex.: Roupa Social"
+      options=servicesType as |el|}}
+      {{el.control searchPlaceholder="Qual o tipo das roupas que deseja lavar?"}}
+    {{/form.element}}
+
+    {{#form.element
+      controlType="power-select"
+      property="serviceQuantity"
+      optionLabelPath="description"
+      label="Para quantas pessoas?"
+      placeholder="ex.: 2 pessoas"
+      options=servicesQuantity as |el|}}
+      {{el.control searchPlaceholder="Para quantas pessoas?"}}
+    {{/form.element}}
+
+    {{bs-button defaultText="Buscar Serviços" type="primary" buttonType="submit" block=true onClick=(action "search" model)}}
+  {{/bs-form}}
+</div>
