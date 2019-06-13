@@ -38,7 +38,7 @@
     {{/each}}
     </tbody>
   </table>
-  {{#link-to "professional.new.address" userService class="btn btn-primary btn-block"}}
+  <button class="btn btn-primary btn-block" {{action 'nextRoute'}} >
     Próximo passo
-  {{/link-to}}
+  </button>
 {{/if}}
