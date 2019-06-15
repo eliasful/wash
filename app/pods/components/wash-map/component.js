@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 import { A } from '@ember/array';
 
 export default Component.extend({
+  store: service(),
   geolocation: service(),
   lat: 0,
   lng: 0,
@@ -13,6 +14,13 @@ export default Component.extend({
     this.set('lat', coords.latitude);
     this.set('lng', coords.longitude);
     this.get('marks').pushObject(coords);
+    const users = await this.get('store').findAll('user');
+    users.forEach(user => {
+      this.get('marks').pushObject({
+        latitude: user.get('lat'),
+        longitude: user.get('lng')
+      });
+    })
   },
   actions: {
     updateCenter(e) {

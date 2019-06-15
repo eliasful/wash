@@ -1,7 +1,10 @@
 import DS from 'ember-data';
 import EmberValidations from 'ember-validations';
+import { inject as service } from '@ember/service';
 
 export default DS.Model.extend(EmberValidations, {
+  geolocation: service(),
+
   username: DS.attr('string'),
   email: DS.attr('string'),
   password: DS.attr('string'),
@@ -15,19 +18,4 @@ export default DS.Model.extend(EmberValidations, {
   lng: DS.attr('string'),
 
   userServices: DS.hasMany('user-service'),
-
-  validations: {
-    'username': {
-      presence: true,
-      length: { minimum: 6 },
-      message: 'must be letters and numbers only'
-    },
-    'email': {
-      presence: true
-    },
-    'password': {
-      presence: true,
-      length: { minimum: 8 }
-    }
-  }
 });
