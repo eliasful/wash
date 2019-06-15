@@ -21,6 +21,12 @@ Router.map(function() {
     });
     this.route('services');
   });
+
+  this.route('user', function() {
+    this.route('solicitation', function() {
+      this.route('prices');
+    });
+  });
 });
 
 export default Router;

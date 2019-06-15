@@ -3,9 +3,12 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   store: service(),
+  router: service(),
   loading: service(),
   servicesQuantity: null,
   servicesType: null,
+  selectedServices: null,
+  selectedQuantity: null,
   async didInsertElement() {
     const servicesType = await this.get('store').findAll('service-type');
     this.set('servicesType', servicesType);
@@ -27,11 +30,19 @@ export default Component.extend({
     }]);
   },
   actions: {
-    search(model) {
-      this.get('loading').change();
-      setTimeout(() => {
-        this.get('loading').change();
-      }, 1000);
+    async search(model) {
+      const ids = this.get('selectedServices').mapBy('id');
+      if (!ids.get('length')) {
+        return
+      }
+
+      this.get('loading').change(true);
+      this.get('router').transitionTo('user.solicitation.prices', {
+        queryParams: {
+          ids,
+          quantity: this.get('selectedQuantity.value')
+        }
+      });
     }
   }
 });

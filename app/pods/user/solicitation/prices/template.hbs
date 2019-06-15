@@ -1,0 +1,33 @@
+<div class="col-sm-12 py-sm-3 pl-sm-5 bd-content">
+  <div class="row">
+    <div class="dropdown-divider"></div>
+    <div class="col-sm-12">
+      <h3 class="bd-title">
+        Veja quem nós encontramos para ajudar você
+      </h3>
+      <div class="card-columns mb-3 text-center">
+        {{#each model.services as |service|}}
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">{{service.user.name}}</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                R$ {{service.price}} <small class="text-muted">/ un.</small>
+              </h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Quantidade solicitada: <b>{{model.quantity}}</b></li>
+                <li>Valor total: <b>R$ {{mult service.price model.quantity}}</b></li>
+                <li>Lavagem de {{service.service.description}}</li>
+                <li>{{service.user.address}}</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary">
+                Contratar esse serviço
+              </button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
