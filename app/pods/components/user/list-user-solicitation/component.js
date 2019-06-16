@@ -14,6 +14,7 @@ export default Component.extend({
   actions: {
     async save() {
       for (let userSolicitation of this.get('model.userSolicitations')) {
+        userSolicitation.set('status', 'Aguardando');
         await userSolicitation.save();
       }
       this.get('router').transitionTo('user.solicitation.dashboard')

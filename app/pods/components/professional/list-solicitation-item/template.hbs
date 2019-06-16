@@ -1,31 +1,21 @@
-<div class="col-md-4">
-  <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-    <div class="col p-4 d-flex flex-column position-static">
-      <strong class="d-inline-block mb-2 text-primary">{{solicitation.status}}</strong>
-      <h3 class="mb-0">{{solicitation.userService.service.description}}</h3>
-      <div class="mb-1 text-muted">{{solicitation.owner.name}}</div>
-      <ul class="list-unstyled mt-3 mb-4">
-        <li>Faltam apenas: <b>{{solicitation.timeLeft}}</b></li>
-        <li>Quantidade solicitada: <b>{{solicitation.quantity}}</b></li>
-        <li>Valor total: <b>R$ {{mult solicitation.userService.price solicitation.quantity}}</b></li>
-        <li>{{solicitation.owner.address}}</li>
-        <li>{{solicitation.observation}}</li>
-        <li>
-          {{input type="number" class="form-control" value=solicitation.estimatedTime}}
-        </li>
-      </ul>
-      <div class="row">
-        {{#if (eq solicitation.status 'Em andamento')}}
-          <div class="col-sm-12">
-            <a href="#" class="btn btn-primary" {{action 'finished'}}>Finalizar</a>
-          </div>
-        {{else}}
-          <div class="col-sm-12">
-            <a href="#" class="btn btn-primary" {{action 'status' true}}>Aceitar</a>
-            <a href="#" class="btn btn-danger" {{action 'status' false}}>Recusar</a>
-          </div>
-        {{/if}}
+{{#solicitation-status solicitation=solicitation}}
+  <div class="row">
+    {{#if (eq solicitation.status 'Aguardando')}}
+      <div class="col-sm-12">
+        <a href="#" class="btn btn-primary" {{action 'status' true}}>Aceitar</a>
+        <a href="#" class="btn btn-danger" {{action 'status' false}}>Recusar</a>
       </div>
-    </div>
+    {{/if}}
+    {{#if (eq solicitation.status 'Em andamento')}}
+      <div class="col-sm-12">
+        <a href="#" class="btn btn-primary" {{action 'finished'}}>Finalizar</a>
+      </div>
+    {{/if}}
+    {{#if (eq solicitation.status 'Finalizado')}}
+      <div class="col-sm-12">
+        <b>Qual sua avaliação para o cliente?</b>
+        {{star-rating rating=solicitation.ratingOwner wholeOnly=true onClick=(action 'avaliation')}}
+      </div>
+    {{/if}}
   </div>
-</div>
+{{/solicitation-status}}

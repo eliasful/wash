@@ -10,10 +10,16 @@ export default DS.Model.extend({
   status: DS.attr('string'),
   estimatedTime: DS.attr('number'),
   acceptedIn: DS.attr('date'),
+  ratingOwner: DS.attr('number'),
+  ratingProfessional: DS.attr('number'),
 
   timeLeft: computed('estimatedTime', 'acceptedIn', function () {
-    const estimatedTime = moment().add(this.get('estimatedTime'), 'hour');
-    const acceptedIn = moment(this.get('acceptedIn'));
-    return estimatedTime.diff(acceptedIn, 'H');
+    const acceptedIn = this.get('acceptedIn');
+    if (!acceptedIn) {
+      return;
+    }
+    const mAcceptedIn = moment(acceptedIn);
+    const mEstimatedTime = moment(acceptedIn).add(this.get('estimatedTime'), 'hour').toDate();
+    return moment(mEstimatedTime).diff(mAcceptedIn, 'hours');
   })
 });
