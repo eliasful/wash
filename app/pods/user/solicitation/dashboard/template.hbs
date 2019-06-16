@@ -1,0 +1,30 @@
+<div class="col-sm-12 py-sm-3 pl-sm-5 bd-content">
+  <div class="row">
+    <div class="dropdown-divider"></div>
+    <div class="col-sm-12">
+      <h3 class="bd-title">
+        Todos os seus pedidos
+      </h3>
+      <div class="row">
+        {{#each model as |solicitation|}}
+          <div class="col-md-4">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">{{solicitation.status}}</strong>
+                <h3 class="mb-0">{{solicitation.userService.service.description}}</h3>
+                <div class="mb-1 text-muted">{{solicitation.userService.user.name}}</div>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Tempo extimado: <b>{{solicitation.timeLeft}}</b></li>
+                  <li>Quantidade solicitada: <b>{{solicitation.quantity}}</b></li>
+                  <li>Valor total: <b>R$ {{mult solicitation.userService.price solicitation.quantity}}</b></li>
+                  <li>{{solicitation.userService.user.address}}</li>
+                  <li>{{solicitation.observation}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
