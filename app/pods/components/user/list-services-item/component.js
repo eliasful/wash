@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 import LatLon from 'geodesy/latlon-ellipsoidal-vincenty.js';
 
 export default Component.extend({
+  store: service(),
   geolocation: service(),
   distanceObserver: observer('service.user.{lat,lng}', async function() {
     const { coords } = await this.get('geolocation').getLocation();
@@ -15,5 +16,13 @@ export default Component.extend({
     this.set('unit', km < 1 ? 'm':'km');
     this.set('distance', (distance).toFixed(2));
     this.set('service.distance', this.get('distance'));
-  }).on('didInsertElement')
+  }).on('didInsertElement'),
+  actions: {
+    add() {
+      const userSolicitation = this.get('store').createRecord('user-solicitation');
+      userSolicitation.set('userService', this.get('service'));
+      userSolicitation.set('quantity', this.get('model.quantity'));
+      this.get('model.userSolicitations').pushObject(userSolicitation);
+    }
+  }
 });

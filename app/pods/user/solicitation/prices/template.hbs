@@ -1,13 +1,25 @@
 <div class="col-sm-12 py-sm-3 pl-sm-5 bd-content">
   <div class="row">
     <div class="dropdown-divider"></div>
-    <div class="col-sm-12">
+    <div class="col-sm-8">
       <h3 class="bd-title">
         Veja quem nós encontramos para ajudar você
       </h3>
       <div class="card-columns mb-3 text-center">
         {{user/list-services model=model}}
       </div>
+    </div>
+    <div class="dropdown-divider"></div>
+    <div class="col-sm-4 position-fixed r-0">
+      <h4 class="d-flex justify-content-between align-items-center">
+        <h3 class="bd-title">
+          Serviços contratados
+        </h3>
+        <span class="badge badge-secondary badge-pill">
+          {{model.userSolicitations.length}}
+        </span>
+      </h4>
+      {{user/list-user-solicitation model=model}}
     </div>
   </div>
 </div>

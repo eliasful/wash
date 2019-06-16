@@ -13,8 +13,8 @@
       <li>{{service.user.address}}</li>
       <li>Distância de você <b>{{distance}} {{unit}}</b></li>
     </ul>
-    <button type="button" class="btn btn-lg btn-block {{if (eq index 0) "btn-primary" "btn-outline-primary"}}">
-      Contratar esse serviço
+    <button {{action 'add'}} type="button" class="btn btn-lg btn-block {{if (eq index 0) "btn-primary" "btn-outline-primary"}}">
+      Contratar
     </button>
   </div>
 </div>

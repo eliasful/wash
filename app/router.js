@@ -25,6 +25,7 @@ Router.map(function() {
   this.route('user', function() {
     this.route('solicitation', function() {
       this.route('prices');
+      this.route('dashboard');
     });
   });
 });
