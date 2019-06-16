@@ -10,6 +10,7 @@ export default DS.Model.extend({
   status: DS.attr('string'),
   estimatedTime: DS.attr('number'),
   acceptedIn: DS.attr('date'),
+  updatedAt: DS.attr('date'),
   ratingOwner: DS.attr('number'),
   ratingProfessional: DS.attr('number'),
 
