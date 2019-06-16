@@ -8,11 +8,11 @@ export default DS.Model.extend({
   observation: DS.attr('string'),
   quantity: DS.attr('number'),
   status: DS.attr('string'),
-  estimatedTime: DS.attr('date'),
+  estimatedTime: DS.attr('number'),
   acceptedIn: DS.attr('date'),
 
   timeLeft: computed('estimatedTime', 'acceptedIn', function () {
-    const estimatedTime = moment(this.get('estimatedTime'));
+    const estimatedTime = moment().add(this.get('estimatedTime'), 'hour');
     const acceptedIn = moment(this.get('acceptedIn'));
     return estimatedTime.diff(acceptedIn, 'H');
   })

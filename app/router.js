@@ -19,7 +19,7 @@ Router.map(function() {
       });
       this.route('contact');
     });
-    this.route('services');
+    this.route('dashboard');
   });
 
   this.route('user', function() {

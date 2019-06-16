@@ -1,0 +1,15 @@
+<div class="col-sm-12 py-sm-3 pl-sm-5 bd-content">
+  <div class="row">
+    <div class="dropdown-divider"></div>
+    <div class="col-sm-12">
+      <h3 class="bd-title">
+        Todos os pedidos feitos à você
+      </h3>
+      <div class="row">
+        {{#each model as |solicitation|}}
+          {{professional/list-solicitation-item solicitation=solicitation}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
