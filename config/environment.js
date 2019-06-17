@@ -25,6 +25,8 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV.urlServer = 'http://localhost:1337';
+    ENV.serverTokenEndpoint = `${ENV.urlServer}/users/login`;
+    ENV.serverTokenRefreshEndpoint = `${ENV.urlServer}/users/check/`;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -47,6 +49,20 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
+
+  ENV['ember-simple-auth'] = {
+    authenticationRoute: 'professional.new.contact',
+    authenticator: 'authenticator:jwt',
+    crossOriginWhitelist: ['*'],
+    authorizationPrefix: 'Bearer ',
+    authorizationHeaderName: 'Authorization',
+  };
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: `${ENV.urlServer}/users/login`,
+    serverTokenRefreshEndpoint: `${ENV.urlServer}/users/token-refresh/`,
+    identificationField: 'email',
+    refreshAccessTokens: false,
+  };
 
   return ENV;
 };
