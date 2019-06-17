@@ -31,6 +31,7 @@ Router.map(function() {
         path: '/:user_id/dashboard'
       });
     });
+    this.route('new');
   });
 });
 

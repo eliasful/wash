@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import moment from 'moment';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 export default Component.extend({
   tagName: '',
@@ -10,16 +10,17 @@ export default Component.extend({
       if (value) {
         this.set('solicitation.acceptedIn', moment().toDate());
         this.set('solicitation.status', 'Em andamento');
-        const estimatedTime = await swal({
-          title: "Em quantas horas esse serviço ficará pronto?",
-          content: {
-            element: "input",
-            attributes: {
-              placeholder: "ex: 2",
-              type: "number",
+        const {value: estimatedTime} = await Swal.fire({
+          title: 'Em quantas horas esse serviço ficará pronto?',
+          input: 'number',
+          showCancelButton: false,
+          inputValidator: (value) => {
+            if (!value) {
+              return 'Você precisa informar o tempo estimado!'
             }
-          },
-        });
+          }
+        })
+
         this.set('solicitation.estimatedTime', estimatedTime);
       } else {
         this.set('solicitation.status', 'Não aceito');

@@ -4,6 +4,4 @@ import config from '../config/environment';
 export default JWTAuthenticator.extend({
   serverTokenEndpoint: config.serverTokenEndpoint,
   serverRefreshTokenEndpoint: config.serverTokenRefreshEndpoint,
-  identificationField: 'email',
-  refreshAccessTokens: false
 });
