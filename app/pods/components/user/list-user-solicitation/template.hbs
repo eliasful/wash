@@ -16,7 +16,13 @@
   </li>
 </ul>
 {{#if model.userSolicitations.length}}
-  <button type="button" class="btn btn-lg btn-block btn-primary" {{action 'verifyLogin'}}>
-    Solicitar e continuar
-  </button>
+  {{#if session.isAuthenticated}}
+    <button type="button" class="btn btn-lg btn-block btn-primary" {{action 'save'}}>
+      Solicitar e continuar
+    </button>
+  {{else}}
+    {{#link-to "user.new" class="btn btn-lg btn-block btn-primary" target="_blank"}}
+      Acessar conta e continuar
+    {{/link-to}}
+  {{/if}}
 {{/if}}

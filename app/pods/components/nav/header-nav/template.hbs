@@ -13,20 +13,21 @@
     {{#bs-button type="success" class="mr-10" onClick=(perform overlay)}}
       Solicite um serviço
     {{/bs-button}}
-    {{#link-to 'professional.new.contact' class="btn btn-outline-light mr-10"}}
-      Cadastre-se como um profissional
-    {{/link-to}}
+
     {{#if session.isAuthenticated}}
       {{#if (eq session.session.content.authenticated.user.type 'professional')}}
         {{#link-to 'professional.dashboard' session.session.content.authenticated.user.id class="btn btn-outline-dark"}}
           Acesse seus pedidos
         {{/link-to}}
       {{else}}
-        {{#link-to 'user.solicitation.dashboard' session.session.content.authenticated.user.id class="btn btn-outline-dark"}}
+        {{#link-to 'user.solicitation.dashboard' session.session.content.authenticated.user.id class="btn btn-outline-light"}}
           Acesse seus pedidos
         {{/link-to}}
       {{/if}}
-
+    {{else}}
+      {{#link-to 'professional.new.contact' class="btn btn-outline-light"}}
+        Cadastre-se como um profissional
+      {{/link-to}}
     {{/if}}
   </form>
 
