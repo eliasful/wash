@@ -3,8 +3,8 @@
     <div class="col p-4 d-flex flex-column position-static">
       <strong class="d-inline-block mb-2 text-primary">{{solicitation.status}}</strong>
       <h3 class="mb-0">{{solicitation.userService.service.description}}</h3>
-      <div class="mb-1 text-muted">{{solicitation.owner.name}}</div>
-      <div class="mb-1 text-muted">{{solicitation.userService.user.name}}</div>
+      <div class="mb-1 text-muted">Cliente: {{solicitation.owner.name}}</div>
+      <div class="mb-1 text-muted">Profissional: {{solicitation.userService.user.name}}</div>
       <ul class="list-unstyled mt-3 mb-4">
         {{#if solicitation.timeLeft}}
           <li>Faltam apenas <b>{{solicitation.timeLeft}} horas</b> para ficar pronto</li>

@@ -1,0 +1,15 @@
+{{#if (not session.isAuthenticated)}}
+  <div class="card card-login">
+  <div class="card-body">
+    <div class="form-signin">
+      <h4 class="font-weight-normal">Acesse sua conta</h4>
+      <div class="dropdown-divider"></div>
+      <label for="inputEmail" class="sr-only">Email</label>
+      {{input type="email" class="form-control" placeholder="E-mail" required="true" value=email}}
+      <label for="inputPassword" class="sr-only">Senha</label>
+      {{input type="password" class="form-control" placeholder="Senha" required="true" value=password}}
+      <button class="btn btn-lg btn-primary btn-block" type="submit" {{action "login"}}>Acessar conta e continuar</button>
+    </div>
+  </div>
+</div>
+{{/if}}

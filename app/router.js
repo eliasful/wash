@@ -19,13 +19,17 @@ Router.map(function() {
       });
       this.route('contact');
     });
-    this.route('dashboard');
+    this.route('dashboard', {
+      path: '/:user_id/dashboard'
+    });
   });
 
   this.route('user', function() {
     this.route('solicitation', function() {
       this.route('prices');
-      this.route('dashboard');
+      this.route('dashboard', {
+        path: '/:user_id/dashboard'
+      });
     });
   });
 });

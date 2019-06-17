@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from "@ember/service";
+import $ from 'jquery';
 
 export default Component.extend({
   router: service(),
@@ -11,8 +12,7 @@ export default Component.extend({
   },
   actions: {
     submit() {
-      this.get('model').save().then((user) => {
-        console.log(user)
+      this.get('model').save().then(() => {
         this.get('router').transitionTo('home');
       });
     }
