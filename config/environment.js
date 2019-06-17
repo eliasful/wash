@@ -19,7 +19,7 @@ module.exports = function(environment) {
     },
 
     APP: {
-      
+
     }
   };
 
@@ -50,18 +50,15 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
-  ENV['ember-simple-auth'] = {
-    authenticationRoute: 'professional.new.contact',
-    authenticator: 'authenticator:jwt',
-    crossOriginWhitelist: ['*'],
-    authorizationPrefix: 'Bearer ',
-    authorizationHeaderName: 'Authorization',
-  };
   ENV['ember-simple-auth-token'] = {
+    authorizationHeaderName: 'Authorization', // Header name added to each API request
+    authorizationPrefix: 'Bearer ', // Prefix added to each API request
     serverTokenEndpoint: `${ENV.urlServer}/users/login`,
-    serverTokenRefreshEndpoint: `${ENV.urlServer}/users/token-refresh/`,
-    identificationField: 'email',
-    refreshAccessTokens: false,
+    serverTokenRefreshEndpoint: `${ENV.urlServer}/users/check/`,
+    refreshTokenPropertyName: 'token',
+    refreshAccessTokens: true,
+    tokenExpirationInvalidateSession: false, // Enables session invalidation on token expiration,
+    refreshLeeway: 5
   };
 
   return ENV;

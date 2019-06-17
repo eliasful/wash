@@ -9,7 +9,10 @@ export default Component.extend({
       this.set('model.type', 'professional');
       this.set('model.password', this.get('model.email'));
       this.get('model').save().then(async (user) => {
-        await this.get('session').authenticate('authenticator:jwt', user.get('email'),  user.get('password'));
+        await this.get('session').authenticate('authenticator:jwt', {
+          email: user.get('email'),
+          password: user.get('password')
+        });
         this.get('router').transitionTo('professional.new.services', user);
       });
     }

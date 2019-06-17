@@ -17,7 +17,7 @@ export default Component.extend({
   actions: {
     async verifyLogin() {
       if (this.get('session.isAuthenticated')) {
-        this.sendAction('save');
+        this.send('save');
       } else {
         const {value: [email, password]} = await Swal.fire({
           title: 'Acesse sua conta',
@@ -38,7 +38,10 @@ export default Component.extend({
           },
           buttonsStyling: false
         });
-        await this.get('session').authenticate('authenticator:jwt', email, password);
+        await this.get('session').authenticate('authenticator:jwt', {
+          email,
+          password
+        });
         this.sendAction('save');
       }
     },

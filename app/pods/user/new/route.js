@@ -11,7 +11,10 @@ export default Route.extend({
       model.set('type', 'user');
       model.set('password', model.get('email'));
       model.save().then(async (user) => {
-        await this.get('session').authenticate('authenticator:jwt', user.get('email'),  user.get('password'));
+        await this.get('session').authenticate('authenticator:jwt', {
+          email: user.get('email'),
+          password: user.get('password')
+        });
       });
     }
   }
