@@ -1,0 +1,12 @@
+<h3 class="bd-title">
+  Todos os pedidos feitos para você
+</h3>
+<div class="row">
+  {{#each model as |solicitation|}}
+    {{professional/list-solicitation-item solicitation=solicitation}}
+  {{else}}
+    <div class="alert alert-warning">
+      <strong>Ops!</strong> Parece que ninguem fez um pedido.
+    </div>
+  {{/each}}
+</div>

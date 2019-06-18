@@ -1,18 +1,40 @@
-<div class="col-sm-12 py-sm-3 pl-sm-5 bd-content">
-  <div class="row">
-    <div class="dropdown-divider"></div>
-    <div class="col-sm-12">
-      <h3 class="bd-title">
-        Todos os pedidos feitos à você
-
-      </h3>
-      <div class="text-right">
-        <a href="#" {{action 'logout'}}>Sair do sistema</a>
-      </div>
-      <div class="row">
-        {{#each model as |solicitation|}}
-          {{professional/list-solicitation-item solicitation=solicitation}}
-        {{/each}}
+<div class="row">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          {{#link-to "professional.dashboard.solicitations" model class="nav-link"}}
+            Dashboard
+          {{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "professional.dashboard.informations" model class="nav-link"}}
+            Suas informações
+          {{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "professional.dashboard.services" model class="nav-link"}}
+            Seus serviços
+          {{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "professional.dashboard.address" model class="nav-link"}}
+            Seu endereço
+          {{/link-to}}
+        </li>
+        <div class="dropdown-divider"></div>
+        <li class="nav-item" {{action 'logout'}}>
+          <a class="nav-link" href="#">
+            Sair do sistema
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col-sm-10 py-sm-3 pl-sm-5 bd-content">
+    <div class="row">
+      <div class="col-sm-12">
+        {{outlet}}
       </div>
     </div>
   </div>

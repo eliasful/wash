@@ -38,7 +38,9 @@
     {{/each}}
     </tbody>
   </table>
-  <button class="btn btn-primary btn-block" {{action 'nextRoute'}} >
-    Próximo passo
-  </button>
+  {{#if (not notTransition)}}
+    <button class="btn btn-primary btn-block" {{action 'nextRoute'}} >
+      Próximo passo
+    </button>
+  {{/if}}
 {{/if}}

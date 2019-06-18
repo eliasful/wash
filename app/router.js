@@ -21,6 +21,11 @@ Router.map(function() {
     });
     this.route('dashboard', {
       path: '/:user_id/dashboard'
+    }, function() {
+      this.route('solicitations');
+      this.route('informations');
+      this.route('services');
+      this.route('address');
     });
   });
 
