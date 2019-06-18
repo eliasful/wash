@@ -14,7 +14,9 @@ export default Component.extend({
     this.set('lat', coords.latitude);
     this.set('lng', coords.longitude);
     this.get('marks').pushObject(coords);
-    const users = await this.get('store').findAll('user');
+    const users = await this.get('store').query('user', {
+      type: 'professional'
+    });
     users.forEach(user => {
       this.get('marks').pushObject({
         latitude: user.get('lat'),
