@@ -53,7 +53,7 @@ export default Component.extend({
         userSolicitation.set('owner', this.get('store').peekRecord('user', user));
         await userSolicitation.save();
       }
-      this.get('router').transitionTo('user.solicitation.dashboard', user);
+      this.get('router').transitionTo('user.dashboard.solicitations', user);
     }
   }
 });

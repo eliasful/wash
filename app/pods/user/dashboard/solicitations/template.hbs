@@ -1,0 +1,15 @@
+<h3 class="bd-title">
+  Todos os seus pedidos
+</h3>
+<div class="row">
+  {{#each model as |solicitation|}}
+    {{#solicitation-status solicitation=solicitation}}
+      {{#if (eq solicitation.status 'Finalizado')}}
+        <b>Qual sua avaliação para o serviço?</b>
+        {{star-rating rating=solicitation.ratingProfessional wholeOnly=true onClick=(route-action 'avaliation' solicitation)}}
+      {{/if}}
+    {{/solicitation-status}}
+  {{else}}
+
+  {{/each}}
+</div>

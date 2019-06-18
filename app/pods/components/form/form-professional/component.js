@@ -7,11 +7,12 @@ export default Component.extend({
   actions: {
     submit() {
       this.set('model.type', 'professional');
+      const password = this.get('model.email');
       this.set('model.password', this.get('model.email'));
       this.get('model').save().then(async (user) => {
         await this.get('session').authenticate('authenticator:jwt', {
-          email: user.get('email'),
-          password: user.get('password')
+          email: this.get('model.email'),
+          password
         });
         this.get('router').transitionTo('professional.new.services', user);
       });

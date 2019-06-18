@@ -27,11 +27,15 @@ Router.map(function() {
   this.route('user', function() {
     this.route('solicitation', function() {
       this.route('prices');
-      this.route('dashboard', {
-        path: '/:user_id/dashboard'
-      });
     });
     this.route('new');
+    this.route('dashboard', {
+      path: '/:user_id/dashboard'
+    }, function() {
+      this.route('solicitations');
+      this.route('informations');
+      this.route('address');
+    });
   });
 });
 
