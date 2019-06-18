@@ -2,8 +2,6 @@
 
 Esse README contém as instruções para a instalação e utilização dessa aplicação.
 
-
-
 ## Pré-requisitos
 
 Você precisa dos itens a seguir, instalados em seu compudador:
