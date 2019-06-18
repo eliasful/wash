@@ -16,7 +16,7 @@
 
     {{#if session.isAuthenticated}}
       {{#if (eq session.session.content.authenticated.user.type 'professional')}}
-        {{#link-to 'professional.dashboard' session.session.content.authenticated.user.id class="btn btn-outline-dark"}}
+        {{#link-to 'professional.dashboard.solicitations' session.session.content.authenticated.user.id class="btn btn-outline-dark"}}
           Acesse seus pedidos
         {{/link-to}}
       {{else}}

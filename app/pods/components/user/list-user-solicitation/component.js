@@ -23,7 +23,7 @@ export default Component.extend({
           title: 'Acesse sua conta',
           html:
             `<input id="swal-input1" class="form-control" placeholder="E-mail">
-            <input id="swal-input2" class="form-control" placeholder="Senha">
+            <input id="swal-input2" type="password" class="form-control" placeholder="Senha">
             <a href="/user/new" target="_blank">Ainda não possuí conta? Clique aqui para criar</a>`,
           focusConfirm: false,
           preConfirm: () => {
@@ -46,7 +46,6 @@ export default Component.extend({
       }
     },
     async save() {
-
       const user = this.get('session.session.content.authenticated.user.id');
       for (let userSolicitation of this.get('model.userSolicitations')) {
         userSolicitation.set('status', 'Aguardando');
