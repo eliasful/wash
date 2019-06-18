@@ -29,7 +29,7 @@ export default Component.extend({
           });
           return;
         }
-        this.get('router').transitionTo('home');
+        this.get('router').transitionTo('professional.dashboard.solicitations');
       });
     }
   }
