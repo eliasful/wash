@@ -1,6 +1,5 @@
 import DS from 'ember-data';
 import environment from 'wash/config/environment';
-import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 import TokenAuthorizerMixin from 'ember-simple-auth-token/mixins/token-authorizer';
 import {computed} from '@ember/object';
 import {inject as service} from '@ember/service';
