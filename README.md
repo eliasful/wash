@@ -20,4 +20,4 @@ Você precisa dos itens a seguir, instalados em seu compudador:
 ## Executando
 
 * `ember serve`
-* Acesse o aplicativo pela url [http://localhost:4200](http://localhost:4200).
+* Acesse o aplicativo pela url [http://localhost:4200/home](http://localhost:4200).
