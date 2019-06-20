@@ -29,7 +29,11 @@ export default Component.extend({
           });
           return;
         }
-        this.get('router').transitionTo('professional.dashboard.solicitations');
+        this.get('router').transitionTo('professional.dashboard.solicitations', this.get('model.id'), {
+          queryParams: {
+            user_id: this.get('model.id')
+          }
+        });
       });
     }
   }

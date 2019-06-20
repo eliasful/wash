@@ -4,7 +4,7 @@ import {A} from '@ember/array';
 export default Route.extend({
   async model(params, transition) {
     await this.store.findAll('user-solicitation');
-    const user = transition.params["professional.dashboard"].user_id;
+    const user = transition.queryParams.user_id || transition.params["professional.dashboard"].user_id;
     const userServices = await this.store.query('user-service', {
       user
     });
