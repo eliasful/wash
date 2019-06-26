@@ -6,9 +6,11 @@
         <p class="h4">Disponibilize seus serviços e consiga uma renda extra.</p>
       </h1>
       {{form/form-login next="professional.dashboard.solicitations"}}
-      <div class="text-center">
-        {{#link-to "user.new"}}Clique aqui para entrar como cliente{{/link-to}}
-      </div>
+      {{#if (not session.isAuthenticated)}}
+        <div class="text-center">
+          {{#link-to "user.new"}}Clique aqui para entrar como cliente{{/link-to}}
+        </div>
+      {{/if}}
     </div>
     <div class="dropdown-divider"></div>
     <div class="col-sm-6">

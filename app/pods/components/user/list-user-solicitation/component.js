@@ -9,12 +9,12 @@ export default Component.extend({
   router: service(),
   userSolicitation: null,
   openModal: false,
-  totalServices: computed('model.userSolicitations.length', function () {
+  totalServices: computed('model.userSolicitations.length', 'model.userSolicitations.@each.quantity', function () {
     let total = 0;
     this.get('model.userSolicitations').forEach(solicitation => {
-      total += solicitation.get('userService.price');
+      total += solicitation.get('userService.price') * solicitation.get('quantity');
     });
-    return total * this.get('model.quantity');
+    return total;
   }),
   actions: {
     async verifyLogin() {
