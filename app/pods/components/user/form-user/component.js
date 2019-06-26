@@ -7,9 +7,7 @@ export default Component.extend({
   actions: {
     submit(model) {
       model.set('type', 'user');
-      const password = model.get('email');
-      model.set('password', password);
-
+      const password = model.get('password');
       model.save().then(async (user) => {
         if (this.get('notAuthenticate')) {
           const Toast = Swal.mixin({

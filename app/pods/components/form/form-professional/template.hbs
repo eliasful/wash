@@ -12,6 +12,9 @@
       {{form.element controlType="email" label="Email" placeholder="ex.: joao@email.com" property="model.email"}}
     </div>
     <div class="col-sm-12">
+      {{form.element controlType="password" label="Senha" placeholder="ex.: senha123" property="model.password"}}
+    </div>
+    <div class="col-sm-12">
       {{#bs-button type="primary" block=true buttonType="submit"disabled=form.isSubmitting}}
         Enviar e continuar
       {{/bs-button}}

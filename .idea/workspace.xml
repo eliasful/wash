@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3913a73b-f6ea-458d-bdaa-c5d7f3ab1589" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/pods/components/modal/modal-observation/component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pods/components/modal/modal-observation/template.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/template.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pods/components/form/form-login/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/form/form-login/component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pods/components/form/form-professional/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/form/form-professional/component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pods/components/form/form-professional/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/form/form-professional/template.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pods/components/user/form-user/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/user/form-user/component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pods/components/user/form-user/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/pods/components/user/form-user/template.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bower_components.ember-try/" />
     <ignored path="$PROJECT_DIR$/.node_modules.ember-try/" />
@@ -23,31 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/template.hbs">
+        <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional/component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user-solicitation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/component.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="92">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -74,6 +54,7 @@
       <find>user.dashboard</find>
       <find>sweetale</find>
       <find>notAuthenticate</find>
+      <find>swal</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
@@ -89,9 +70,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/styles/app.scss" />
         <option value="$PROJECT_DIR$/app/styles/components/login.scss" />
-        <option value="$PROJECT_DIR$/app/pods/components/form/form-login/component.js" />
         <option value="$PROJECT_DIR$/app/pods/professional/new/route.js" />
         <option value="$PROJECT_DIR$/app/pods/components/form/form-login/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/application/template.hbs" />
@@ -107,15 +86,12 @@
         <option value="$PROJECT_DIR$/app/router.js" />
         <option value="$PROJECT_DIR$/app/pods/user/new/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/user/new/route.js" />
-        <option value="$PROJECT_DIR$/app/pods/components/user/form-user/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/user/dashboard/informations/route.js" />
         <option value="$PROJECT_DIR$/app/pods/user/dashboard/informations/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/user/dashboard/address/route.js" />
-        <option value="$PROJECT_DIR$/app/pods/components/user/form-user/component.js" />
         <option value="$PROJECT_DIR$/app/pods/user/dashboard/address/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/professional/dashboard/solicitations/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/professional/dashboard/informations/route.js" />
-        <option value="$PROJECT_DIR$/app/pods/components/form/form-professional/component.js" />
         <option value="$PROJECT_DIR$/app/pods/professional/dashboard/services/route.js" />
         <option value="$PROJECT_DIR$/app/pods/professional/dashboard/address/route.js" />
         <option value="$PROJECT_DIR$/app/pods/professional/dashboard/address/template.hbs" />
@@ -140,6 +116,11 @@
         <option value="$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/component.js" />
         <option value="$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/template.hbs" />
         <option value="$PROJECT_DIR$/app/pods/components/modal/modal-observation/template.hbs" />
+        <option value="$PROJECT_DIR$/app/pods/components/form/form-professional/template.hbs" />
+        <option value="$PROJECT_DIR$/app/pods/components/form/form-login/component.js" />
+        <option value="$PROJECT_DIR$/app/pods/components/user/form-user/template.hbs" />
+        <option value="$PROJECT_DIR$/app/pods/components/form/form-professional/component.js" />
+        <option value="$PROJECT_DIR$/app/pods/components/user/form-user/component.js" />
       </list>
     </option>
   </component>
@@ -173,12 +154,6 @@
               <item name="wash" type="b2602c69:ProjectViewProjectNode" />
               <item name="wash" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wash" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wash" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pods" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -194,7 +169,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pods" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wash" type="b2602c69:ProjectViewProjectNode" />
@@ -202,8 +177,8 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pods" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="modal" type="462c0819:PsiDirectoryNode" />
-              <item name="modal-observation" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="form-login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wash" type="b2602c69:ProjectViewProjectNode" />
@@ -211,7 +186,8 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pods" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="form-professional" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wash" type="b2602c69:ProjectViewProjectNode" />
@@ -220,7 +196,15 @@
               <item name="pods" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="list-user-solicitation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wash" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pods" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="form-user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wash" type="b2602c69:ProjectViewProjectNode" />
@@ -373,7 +357,7 @@
       <workItem from="1560561731900" duration="61722000" />
       <workItem from="1560899754161" duration="11312000" />
       <workItem from="1561343919228" duration="1355000" />
-      <workItem from="1561506792262" duration="2115000" />
+      <workItem from="1561506792262" duration="4408000" />
     </task>
     <task id="LOCAL-00001" summary="implementa metodo de salvar e enviar para a tela de serviços">
       <created>1559736057739</created>
@@ -557,11 +541,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561057576451</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="adiciona modal observações">
+      <created>1561508938434</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1561508938434</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122698000" />
+    <option name="totallyTimeSpent" value="124991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="-11" width="1368" height="780" extended-state="6" />
@@ -607,16 +598,10 @@
     <MESSAGE value="Atualiza README" />
     <MESSAGE value="correção no find" />
     <MESSAGE value="ajustes" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajustes" />
+    <MESSAGE value="adiciona modal observações" />
+    <option name="LAST_COMMIT_MESSAGE" value="adiciona modal observações" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/pods/professional/dashboard/services/route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/pods/professional/dashboard/address/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -659,16 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional-services/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-services/template.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -692,16 +667,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/pods/professional/new/address/route.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/user/form-user/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/pods/components/nav/header-nav/template.hbs">
       <provider selected="true" editor-type-id="text-editor">
@@ -782,23 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional/template.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/pods/professional/new/template.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -847,23 +795,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-login/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" lean-forward="true" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-login/template.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="7" lean-forward="true" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -958,20 +889,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user-service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/modal/modal-observation/template.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/template.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -985,17 +920,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/modal/modal-observation/template.hbs">
+    <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="230">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pods/components/user/list-user-solicitation/template.hbs">
+    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-login/template.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="299">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional/template.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional-services/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/user/form-user/template.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-login/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/user/form-user/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pods/components/form/form-professional/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
