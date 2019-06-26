@@ -1,0 +1,22 @@
+{{#bs-modal open=open onHidden=(action (mut open) false) as |modal|}}
+  {{#modal.header}}
+    <h4 class="modal-title">
+      Adicione alguma observação
+    </h4>
+  {{/modal.header}}
+  {{#modal.body}}
+    <form class="form">
+      <div class="form-group">
+        <label>Quantidade solicitada</label>
+        {{input type="number" placeholder="ex.: 4" class="form-control" value=userSolicitation.quantity}}
+      </div>
+      <div class="form-group">
+        <label>Observação</label>
+        {{textarea placeholder="ex.: Lavar separado das outras roupas" class="form-control" value=userSolicitation.observation}}
+      </div>
+    </form>
+  {{/modal.body}}
+  {{#modal.footer}}
+    {{#bs-button type="primary" onClick=(action modal.close)}}Adicionar observação{{/bs-button}}
+  {{/modal.footer}}
+{{/bs-modal}}

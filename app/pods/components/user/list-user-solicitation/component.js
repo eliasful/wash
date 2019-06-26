@@ -7,6 +7,8 @@ export default Component.extend({
   session: service(),
   store: service(),
   router: service(),
+  userSolicitation: null,
+  openModal: false,
   totalServices: computed('model.userSolicitations.length', function () {
     let total = 0;
     this.get('model.userSolicitations').forEach(solicitation => {
@@ -53,6 +55,10 @@ export default Component.extend({
         await userSolicitation.save();
       }
       this.get('router').transitionTo('user.dashboard.solicitations', user);
+    },
+    openModal(userSolicitation) {
+      this.set('userSolicitation', userSolicitation);
+      this.set('openModal', true);
     }
   }
 });
